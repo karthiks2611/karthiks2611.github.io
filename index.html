@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBV08LH4LE"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LBV08LH4LE');
+  </script>
+</head>
+
+<body>
+<!-- Manual Section -->
+<div class="container">
+  <h1 id="level-title">Press A Key to Start</h1>
+  <button id="manual-button" class="manual-button">Show Manual</button>
+  <div id="manual-modal" class="modal">
+    <div class="modal-content">
+      <h2>Game Manual</h2>
+      <p>Welcome to the Memory game 1.0! Here's how to play:</p>
+      <p>1. The game will start with a single color shown in the center.</p>
+      <p>2. Remember the color and click/tap the same color to continue.</p>
+      <p>3. The sequence will get longer as you progress.</p>
+      <p>4. If you make a mistake, the game will end.</p>
+      <p>5. Try to beat your high score!</p>
+      <button id="close-manual-btn">Close</button>
+    </div>
+  </div>
+  <div class="simon-board">
+    <div type="button" id="green" class="btn green"></div>
+    <div type="button" id="red" class="btn red"></div>
+  </div>
+  <div class="simon-board">
+    <div type="button" id="yellow" class="btn yellow"></div>
+    <div type="button" id="blue" class="btn blue"></div>
+  </div>
+  <div id="game-over-modal" class="modal">
+    <div class="modal-content">
+      <h2>Game Over</h2>
+      <p>Your score: <span id="score">0</span></p>
+      <button id="restart-btn">Restart</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="game.js" charset="utf-8"></script>
+</body>
+
+</html>
